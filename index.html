@@ -13,7 +13,12 @@
                 document.getElementById("protectedContent").style.display = "block";
                 document.getElementById("passwordForm").style.display = "none";
             } else {
-                alert("Incorrect password. Please try again.");
+                alert("Incorrect password. Please wait 3 seconds before retrying.");
+                document.getElementById("passwordForm").style.display = "none"; // Hide form during delay
+                setTimeout(function() {
+                    document.getElementById("passwordForm").style.display = "block"; // Show form again after delay
+                    document.getElementById("password").value = ""; // Clear the input
+                }, 30000); // 30 seconds delay for retry
             }
         }
     </script>
