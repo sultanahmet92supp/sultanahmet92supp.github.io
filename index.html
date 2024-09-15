@@ -13,7 +13,7 @@
                 document.getElementById("protectedContent").style.display = "block";
                 document.getElementById("passwordForm").style.display = "none";
             } else {
-                alert("Incorrect password. Please wait 3 seconds before retrying.");
+                alert("Incorrect code. Please wait 30 seconds before retrying.");
                 document.getElementById("passwordForm").style.display = "none"; // Hide form during delay
                 setTimeout(function() {
                     document.getElementById("passwordForm").style.display = "block"; // Show form again after delay
@@ -29,10 +29,10 @@
     </style>
 </head>
 <body>
-    <h2>Password Protected Page</h2>
+    <h2>Welcome on my webpage!</h2>
     
     <div id="passwordForm">
-        <label for="password">Enter Password:</label>
+        <label for="password">Enter code:</label>
         <input type="password" id="password">
         <button onclick="checkPassword()">Submit</button>
     </div>
